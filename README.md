@@ -1,6 +1,11 @@
----
-
 # README du projet GitLab Vagrant
+
+## Prérequis
+
+Avant de commencer, assurez-vous d'avoir installé les logiciels suivants :
+
+- **[VirtualBox](https://www.virtualbox.org/)** : un hyperviseur open source pour créer et gérer des machines virtuelles.
+- **[Vagrant](https://www.vagrantup.com/)** : un outil pour construire et gérer des environnements de développement virtuels.
 
 ## Ce que le projet fait
 
@@ -12,32 +17,39 @@ Ce projet est utile pour les développeurs et les équipes qui souhaitent déplo
 
 ## Prise en main du projet par les utilisateurs
 
-Pour commencer avec ce projet, assurez-vous d'avoir Vagrant et VirtualBox installés sur votre machine. Suivez ces étapes :
+Pour commencer avec ce projet, suivez ces étapes :
 
 1. **Cloner le dépôt :**
    ```bash
-   git clone <URL_DU_DEPOT>
-   cd <NOM_DU_DOSSIER>
+   git clone https://github.com/Arrrman/vagrantgitlab.git
+   cd vagrantgitlab
    ```
 
-2. **Lancer la machine virtuelle :**
+3. **Modifier le fichier de configuration de GitLab :**
+   Vous devez modifier la ligne suivante dans le fichier `Vagrantfile` :
+   ```ruby
+   sed -i "s|external_url 'http://gitlab.example.com'|external_url 'https://your.domain.local'|" /etc/gitlab/gitlab.rb
+   ```
+   Remplacez `https://your.domain.local` par le domaine que vous souhaitez.
+
+3. **Lancer la machine virtuelle :**
    ```bash
    vagrant up
    ```
 
-3. **Accéder à GitLab :**
-   Une fois la machine virtuelle démarrée, ouvrez votre navigateur et allez à `http://192.168.33.25` pour accéder à l'interface de GitLab.
+4. **Accéder à GitLab :**
+   Une fois la machine virtuelle démarrée, ouvrez votre navigateur et allez à `http://192.168.33.25` ou `https://your.domain.local` pour accéder à l'interface de GitLab.
 
-4. **Configurer GitLab :**
-   Vous pourrez vous connecter avec les identifiants par défaut (admin / admin) et configurer votre instance selon vos besoins.
+5. **Configurer GitLab :**
+   Vous pourrez vous connecter avec les identifiants par défaut `root` et le mot de passe est disponible en faisant un cat /etc/gitlab/initial_root_password ansi vous pouvez configurer votre instance selon vos besoins.
 
-5. **Arrêter la machine virtuelle :**
+6. **Arrêter la machine virtuelle :**
    Lorsque vous avez terminé, vous pouvez arrêter la machine virtuelle avec :
    ```bash
    vagrant halt
    ```
 
-6. **Destruction de la machine virtuelle (facultatif) :**
+7. **Destruction de la machine virtuelle (facultatif) :**
    Si vous souhaitez supprimer la machine virtuelle, utilisez :
    ```bash
    vagrant destroy
@@ -45,9 +57,16 @@ Pour commencer avec ce projet, assurez-vous d'avoir Vagrant et VirtualBox instal
 
 ## Remarques
 
-- Assurez-vous que votre réseau est configuré pour permettre l'accès à l'adresse IP `192.168.33.25`.
+- Assurez-vous que votre réseau est configuré pour permettre l'accès à l'adresse IP `192.168.33.25` sinon à vous de définir l'IP selon vos caractéristique.
 - La configuration de Let's Encrypt nécessite que le domaine soit correctement configuré pour pointer vers cette adresse IP.
+- Une redirection de ports sur le 80 et 443 peut être nécessaire 
+## Authors
 
----
+- [@Arrrman](https://www.github.com/Arrrman)
 
-N'hésite pas à modifier ou à ajouter des détails en fonction de tes besoins spécifiques. Si tu as d'autres questions ou demandes, fais-le moi savoir !
+### Résumé
+
+- Assure-toi que tu n'essaies pas de mélanger ce contenu Markdown avec du YAML. 
+- Si le problème persiste, vérifie les fichiers où tu utilises des références ou des alias YAML pour voir s'il y a des erreurs de syntaxe.
+
+Si tu as besoin d'autres précisions ou si tu as d'autres fichiers à vérifier, n'hésite pas à le dire !
