@@ -49,7 +49,7 @@ Pour commencer avec ce projet, suivez ces étapes :
    vagrant halt
    ```
 
-7. **Destruction de la machine virtuelle (facultatif) :**
+7. **Destruction de la machine virtuelle :**
    Si vous souhaitez supprimer la machine virtuelle, utilisez :
    ```bash
    vagrant destroy
@@ -63,10 +63,3 @@ Pour commencer avec ce projet, suivez ces étapes :
 ## Authors
 
 - [@Arrrman](https://www.github.com/Arrrman)
-
-### Résumé
-
-- Assure-toi que tu n'essaies pas de mélanger ce contenu Markdown avec du YAML. 
-- Si le problème persiste, vérifie les fichiers où tu utilises des références ou des alias YAML pour voir s'il y a des erreurs de syntaxe.
-
-Si tu as besoin d'autres précisions ou si tu as d'autres fichiers à vérifier, n'hésite pas à le dire !
