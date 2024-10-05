@@ -41,7 +41,7 @@ Pour commencer avec ce projet, suivez ces étapes :
    Une fois la machine virtuelle démarrée, ouvrez votre navigateur et allez à `http://192.168.33.25` ou `https://your.domain.local` pour accéder à l'interface de GitLab.
 
 5. **Configurer GitLab :**
-   Vous pourrez vous connecter avec les identifiants par défaut `root` et le mot de passe est disponible en faisant un cat /etc/gitlab/initial_root_password ansi vous pouvez configurer votre instance selon vos besoins.
+   Vous pourrez vous connecter avec les identifiants par défaut `root` et le mot de passe est disponible en faisant un cat `/etc/gitlab/initial_root_password` ansi vous pouvez configurer votre instance selon vos besoins.
 
 6. **Arrêter la machine virtuelle :**
    Lorsque vous avez terminé, vous pouvez arrêter la machine virtuelle avec :
