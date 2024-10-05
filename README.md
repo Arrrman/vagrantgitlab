@@ -1,4 +1,4 @@
-# README du projet GitLab Vagrant
+# README du projet GitLab x Vagrant
 
 ## Prérequis
 
