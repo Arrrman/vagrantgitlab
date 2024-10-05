@@ -1,5 +1,3 @@
-Voici un modèle de README qui inclut les trois critères que tu as spécifiés :
-
 ---
 
 # README du projet GitLab Vagrant
