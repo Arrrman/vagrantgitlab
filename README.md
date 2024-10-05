@@ -6,8 +6,8 @@
 
 Avant de commencer, assurez-vous d'avoir installé les logiciels suivants :
 
-- **[VirtualBox](https://www.virtualbox.org/)** : un hyperviseur open source pour créer et gérer des machines virtuelles.
-- **[Vagrant](https://www.vagrantup.com/)** : un outil pour construire et gérer des environnements de développement virtuels.
+**[VirtualBox](https://www.virtualbox.org/)** : un hyperviseur open source pour créer et gérer des machines virtuelles.
+**[Vagrant](https://www.vagrantup.com/)** : un outil pour construire et gérer des environnements de développement virtuels.
 
 ## Ce que le projet fait
 
