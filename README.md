@@ -19,12 +19,12 @@ Ce projet est utile pour les développeurs et les équipes qui souhaitent déplo
 
 ## Prise en main du projet par les utilisateurs
 
-Pour commencer avec ce projet, assurez-vous d'avoir Vagrant et VirtualBox installés sur votre machine. Suivez ces étapes :
+Pour commencer avec ce projet, suivez ces étapes :
 
 1. **Cloner le dépôt :**
    ```bash
-   git clone https://github.com/Arrrman/vagrantgitlab.git
-   cd vagrantgitlab
+   git clone <URL_DU_DEPOT>
+   cd <NOM_DU_DOSSIER>
    ```
 
 2. **Lancer la machine virtuelle :**
@@ -57,4 +57,4 @@ Pour commencer avec ce projet, assurez-vous d'avoir Vagrant et VirtualBox instal
 
 ---
 
-N'hésite pas à modifier ou à ajouter des détails en fonction de tes besoins spécifiques. Si tu as d'autres questions ou demandes, fais-le moi savoir !
+N'hésite pas à ajuster ou à ajouter des informations selon tes besoins. Si tu as d'autres questions ou demandes, fais-le moi savoir !
