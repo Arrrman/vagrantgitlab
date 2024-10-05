@@ -2,6 +2,13 @@
 
 # README du projet GitLab Vagrant
 
+## Prérequis
+
+Avant de commencer, assurez-vous d'avoir installé les logiciels suivants :
+
+- **[VirtualBox](https://www.virtualbox.org/)** : un hyperviseur open source pour créer et gérer des machines virtuelles.
+- **[Vagrant](https://www.vagrantup.com/)** : un outil pour construire et gérer des environnements de développement virtuels.
+
 ## Ce que le projet fait
 
 Ce projet configure une machine virtuelle avec GitLab CE (Community Edition) en utilisant Vagrant et VirtualBox. Il automatise le processus d'installation de GitLab sur une distribution Ubuntu 22.04, en configurant les paramètres nécessaires pour un fonctionnement optimal, y compris la configuration du réseau et la sécurité. Le script inclut des instructions pour installer les dépendances, configurer Let's Encrypt pour la gestion des certificats SSL, et personnaliser les paramètres de GitLab.
@@ -16,8 +23,8 @@ Pour commencer avec ce projet, assurez-vous d'avoir Vagrant et VirtualBox instal
 
 1. **Cloner le dépôt :**
    ```bash
-   git clone <URL_DU_DEPOT>
-   cd <NOM_DU_DOSSIER>
+   git clone https://github.com/Arrrman/vagrantgitlab.git
+   cd vagrantgitlab
    ```
 
 2. **Lancer la machine virtuelle :**
