@@ -2,7 +2,7 @@ Vagrant.configure('2') do |config|
   config.vm.define "gitlab.local" do |machine|
     machine.vm.box = 'generic/ubuntu2204'
     machine.vm.hostname = "gitlab.local"
-    config.vm.network "public_network"
+    config.vm.network "public_network", ip:192.168.33.25
     machine.vm.provider "virtualbox" do |vb|
       vb.gui = true
       vb.name = "gitlab"
