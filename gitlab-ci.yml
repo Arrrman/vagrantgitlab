@@ -1,0 +1,49 @@
+stages:
+  - build
+  - test
+  - push
+
+variables:
+  DOCKER_IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build -t $DOCKER_IMAGE .
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+
+test:
+  stage: test
+  before_script:
+    - sudo apt-get update
+    - sudo apt-get install -y tidy curl
+    # Arrêter et supprimer tout conteneur existant avec le même nom
+    - docker stop test_container || true
+    - docker rm test_container || true
+  script:
+    - docker run --name test_container -d -p 8081:80 $DOCKER_IMAGE
+    - sleep 5  # Attendre que le serveur démarre
+    - curl -f http://localhost:8081 || exit 1
+    - docker cp test_container:/usr/share/nginx/html/index.html ./index.html
+    - tidy -e index.html || true
+  after_script:
+    # Nettoyage : arrêter et supprimer le conteneur après les tests
+    - docker stop test_container || true
+    - docker rm test_container || true
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+
+push:
+  stage: push
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker push $DOCKER_IMAGE
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
