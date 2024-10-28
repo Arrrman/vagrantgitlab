@@ -59,7 +59,26 @@ Pour commencer avec ce projet, suivez ces étapes :
 
 - Assurez-vous que votre réseau est configuré pour permettre l'accès à l'adresse IP `192.168.33.25` sinon à vous de définir l'IP selon vos caractéristique.
 - La configuration de Let's Encrypt nécessite que le domaine soit correctement configuré pour pointer vers cette adresse IP.
-- Une redirection de ports sur le 80 et 443 peut être nécessaire 
+- Une redirection de ports sur le 80 et 443 peut être nécessaire
+
+## Configuration des Runners
+
+Les runners GitLab ont été correctement configurés pour exécuter nos jobs CI/CD. Ils sont essentiels pour l'automatisation de nos processus de développement.
+
+![Runners GitLab configurés](images/runners.png)
+
+## Pipeline CI/CD
+
+Notre pipeline CI/CD a été configuré avec succès et fonctionne comme prévu. Il automatise le processus de build, de test et de déploiement de notre application.
+
+![Pipeline CI/CD réussi](images/pipeline.png)
+
+## Tests de Fumée
+
+Les tests de fumée ont été implémentés et exécutés avec succès, garantissant le bon fonctionnement de base de notre application après chaque déploiement.
+
+![Tests de fumée réussis](images/smoke_tests.png)
+
 ## Authors
 
 - [@Arrrman](https://www.github.com/Arrrman)
